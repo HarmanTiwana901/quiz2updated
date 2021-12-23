@@ -9,6 +9,6 @@ export interface ResponseFuncs {
   // Interface to define our Todo model on the frontend
   export interface Flamingo {
     name: string
-    age: string
     color: string
+    byUser: string
   }

@@ -11,8 +11,9 @@ export const connect = async () => {
 
   // SCHEMA
   const schema = new mongoose.Schema({
-    email: String,
-    name: String
+    name: String,
+    color: String,
+    byUser: String
   })
 
 

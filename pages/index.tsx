@@ -7,6 +7,7 @@ import { Flamingo } from "../utils/types"
 import Link from "next/link"
 import { useState } from 'react';
 import { useSession, signIn, signOut } from "next-auth/react"
+import { connect } from "../utils/database";
 
 export default function Home() {
   const { data: session } = useSession()
@@ -14,19 +15,6 @@ export default function Home() {
  
   
   if(session) {
-    const addUser = () => {
-      let user = {email: session.user.email, name: session.user.name}
-      fetch("http://localhost:3000/api/flamingo", 
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-      }
-      );
-    }
-    addUser();
     return (
       <div>
         Signed in as {session.user.name}
@@ -43,4 +31,3 @@ export default function Home() {
     )
   }
 }
-

@@ -16,12 +16,12 @@ function Show(props: IndexProps) {
 
   return (
     <div>
-      <h1>Flamingos!</h1>
+      <h1>Cars</h1>
       {flamingos.map(f => (
           <div className={styles.box} key={f.name}>
-              <h2>Name: {f.name}</h2>
-              <h5>Age: {f.age}</h5>
-              <h5>Color: {f.color}</h5>
+              <h2>Car Name: {f.name}</h2>
+              <h5>Car Color {f.color}</h5>
+              <h5>By: {f.byUser}</h5>
           </div>
       ))}
     </div> 
